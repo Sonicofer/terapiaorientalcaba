@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bad+Script&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <!-- css -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Tratamientos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bad+Script&family=Roboto+Serif:opsz,wght@8..144,100&display=swap" rel="stylesheet"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>TerapiaOriental</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="headerIzq">
-            <h1>Terapias Orientales</h1>
-            <p>CABA</p>
-        </div>
+    <div class="contenedor">
+        <header class="header">
+            <div class="headerIzq">
+                <h1>Terapia Oriental</h1>
+                <p>CABA</p>
+            </div>
+            <img src="../img/img1header.png" alt="Escultura de acupuntura ">
+            <p class="headerDer">Terapias integrativas y complementarias</p>
+        </header>
+
+        <nav class="nav navbar navbar-expand-sm">
+            <button class=" boton navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
+              <span class="navbar-toggler-icon"></span>
+            </button>
         
-        <div class="headerImg">
-            <img src="../img/img1header.png" alt="Modelo de acupuntura">
-        </div>
-
-        <div class="headerDer">
-            <h2>Terapias integrativas y complementarias</h2>
-        </div>
-    </header>
-
-    <nav class="nav">
-        <ul class="navUl">
-            <li class="navLi"><a href="../index.html">Inicio</a></li>
-            <li class="navLi"><a href="tratamientos.html">Tratamientos</a></li>
-            <li class="navLi"><a href="nosotros.html">Nosotros</a></li>
-            <li class="navLi"><a href="turnos.html">Turnos</a></li>
-            <li class="navLi"><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <main class="main">
-        <section class="mainRedes">
-            <a href="#"><img src="../img/img8instagram.png" alt="Logo Instagram"></a>
-            <a href=""><img src="../img/img9whatsapp.png" alt="Logo WhatsApp"></a>
-        </section>
+            <div class="menu collapse navbar-collapse" id="opciones">   
+              <ul class="navUl navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tratamientos.html">Tratamientos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="turnos.html">Turnos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>            
+              </ul>
+            </div>
+          </nav>
         
-        <section class="tratamientos">
-            <div>
-                <img src="../img/img3acu.png" alt="Terapia de acupuntura">
-                <h2>Acupuntura</h2>
-                <p>La acupuntura consta de una amplia variedad de técnicas ligeramente invasivas, indoloras con una alta efectividad en el tratamiento del dolor y trastornos psicoemocionales, con un amplio rango de tratamiento en todo tipo de patologías.</p>
+        <main class="main">
+            <div class="mainRedes">
+                <a target="_blank" href="https://www.instagram.com/?hl=en"><img src="../img/img8instagram.png" alt="Logo de instagram"></a>
+                <a target="_blank" href="https://web.whatsapp.com/"><img src="../img/img9whatsapp.png" alt="Logo de WhatsApp"></a>
             </div>
-    
-            <div>
-                <img src="../img/img4fito.jpg" alt="Terapia de Fitoterepia">
-                <h2>Fitoterapia</h2>
-                <p>La Fitoterapia es una rama de la MTC que utiliza distintos procesamientos de plantas naturales para el tratamiento de todo tipo de patologías.</p>
-            </div>
-    
-            <div>
-                <img src="../img/img5moxa.jpg" alt="">
-                <h2>Moxibustión</h2>
-                <p>La moxibustion es una excelente técnica complementaria para el tratamiento de todo tipo de dolores o distintos tipos de patologías.</p>
-            </div>
-    
-            <div>
-                <img src="../img/img6tui.png" alt="">
-                <h2>Tui Na</h2>
-                <p>El masaje Tui Na es otra de las grandes técnicas complementarias de la MTC. </p>
-            </div>
-    
-            <div>
-                <img src="../img/img7vento.webp" alt="">
-                <h2>Ventosas</h2>
-                <p>Las ventosas son otro tipo de técnica complementaria con gran éxito en el tratamiento de los dolores y patologías generales.</p>
-            </div>
-        </section>
-    </main>
+        
+            <section class="tratamientos">
+                <div class="tratamientosUno">
+                    <img src="../img/img3acu.png" alt="Terapia de acupuntura">
+                    <h2>Acupuntura</h2>
+                    <p>La acupuntura consta de una amplia variedad de técnicas ligeramente invasivas, indoloras con una alta efectividad en el tratamiento del dolor y trastornos psicoemocionales, con un amplio rango de tratamiento en todo tipo de patologías.</p>
+                </div>
+        
+                <div class="tratamientosDos">
+                    <img src="../img/img4fito.jpg" alt="Terapia de Fitoterepia">
+                    <h2>Fitoterapia</h2>
+                    <p>La Fitoterapia es una rama de la MTC que utiliza distintos procesamientos de plantas naturales para el tratamiento de todo tipo de patologías.</p>
+                </div>
+        
+                <div class="tratamientosTres">
+                    <img src="../img/img5moxa.jpg" alt="">
+                    <h2>Moxibustión</h2>
+                    <p>La moxibustion es una excelente técnica complementaria para el tratamiento de todo tipo de dolores o distintos tipos de patologías.</p>
+                </div>
+        
+                <div class="tratamientosCuatro">
+                    <img src="../img/img6tui.png" alt="">
+                    <h2>Tui Na</h2>
+                    <p>El masaje Tui Na es otra de las grandes técnicas complementarias de la MTC. </p>
+                </div>
+        
+                <div class="tratamientosCinco">
+                    <img src="../img/img7vento.webp" alt="">
+                    <h2>Ventosas</h2>
+                    <p>Las ventosas son otro tipo de técnica complementaria con gran éxito en el tratamiento de los dolores y patologías generales.</p>
+                </div>
+            </section>
+        </main>
 
     <footer class="footer">
         <div>
-            <a href="#"><img src="../img/img8instagram.png" alt="Logo Instagram"></a>
-            <h3>@terapiaorientalcaba</h3>
-            <a href="#"><img src="../img/img9whatsapp.png" alt="Logo WhatsApp"></a>
-            <h3>111-111-1111</h3>
+            <a target="_blank" href="https://www.instagram.com/?hl=en"><img src="../img/img8instagram.png" alt="Logo de instagram"></a>
+            <a target="_blank" href="https://web.whatsapp.com/"><img src="../img/img9whatsapp.png" alt="Logo de WhatsApp"></a>
         </div>
-        <h4 class="footer-contacto">Todos los derechos reservados - ©SanRai</h4>
+        <h3>© Todos los derechos reservados - SanRai</h3>
     </footer>
+</div>
 
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

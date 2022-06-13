@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bad+Script&family=Roboto+Serif:opsz,wght@8..144,100&display=swap" rel="stylesheet"> 
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
     <title>TerapiaOriental</title>
 </head>
+
 <body>
     <div class="contenedor">
         <header class="header">
@@ -19,25 +26,85 @@
                 <h1>Terapia Oriental</h1>
                 <p>CABA</p>
             </div>
-
-            <div class="headerImg">
-                <img src="img/img1header.png" alt="Escultura de acupuntura ">
-            </div>
-
-            <div class="headerDer">
-                <p>Terapias integrativas y complementarias</p>
-            </div>
+            <img src="img/img1header.png" alt="Escultura de acupuntura ">
+            <p class="headerDer">Terapias integrativas y complementarias</p>
         </header>
 
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Tratamientos</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Turnos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="nav navbar navbar-expand-sm">
+            <button class=" boton navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="menu collapse navbar-collapse" id="opciones">   
+              <ul class="navUl navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/tratamientos.html">Tratamientos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/turnos.html">Turnos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                </li>            
+              </ul>
+            </div>
+          </nav>
+        
+        <main class="main">
+            <div class="mainRedes">
+                <a href="https://www.instagram.com/accounts/login/"><img src="img/img8instagram.png" alt="Logo de instagram"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="img/img9whatsapp.png" alt="Logo de WhatsApp"></a>
+            </div>
+
+            <div class="mainFrase">
+                <h2>"La <span>salud</span> es nuestro mayor <span>tesoro</span>"</h2>
+            </div>
+
+            <div class="mainTerapias">
+                <div>
+                    <a href="pages/tratamientos.html"><img src="img/img3acu.png" alt="Imagen de tratamiento con técnica de acupuntura"></a>
+                    <p>Acupuntura</p>
+                </div>
+
+                <div>
+                    <a href="pages/tratamientos.html"><img src="img/img4fito.jpg" alt="Imagen de tratamiento con técnica de fitoterapia"></a>
+                    <p>Fitoterapia</p>
+                </div>
+
+                <div>
+                    <a href="pages/tratamientos.html"><img src="img/img6tui.png" alt="Imagen de tratamiento con técnica de Tui Na"></a>
+                    <p>Tui Na</p>
+                </div>
+
+                <div>
+                    <a href="pages/tratamientos.html"><img src="img/img5moxa.jpg" alt="Imagen de tratamiento con técnica de Moxibustión"></a>
+                    <p>Moxibustión</p>
+                </div>
+
+                <div>
+                    <a href="pages/tratamientos.html"><img src="img/img7vento.webp" alt="Imagen de tratamiento con técnica de Ventosas"></a>
+                    <p>Ventosas</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="img/img8instagram.png" alt="Logo de instagram"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="img/img9whatsapp.png" alt="Logo de WhatsApp"></a>
+            </div>
+            <h3>© Todos los derechos reservados - SanRai</h3>
+        </footer>
     </div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </body>
 </html>
