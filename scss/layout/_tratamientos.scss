@@ -1,0 +1,50 @@
+/*Tratamientos*/
+
+.tratamientos{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        background-color: $color4;
+        align-items: center;
+        padding: 1rem;
+        
+        img{
+            width: 5rem;
+            height: 5rem;
+            border: solid black 0.1px;
+            border-radius: 100%;
+        }
+
+        h2{
+            font-family: $fuente3;
+            color: white;
+            text-align: center;
+        }
+
+        p{
+            font-family: $fuente2;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }    
+}
+
+@media screen and (min-width: 900px) {
+    .tratamientos {
+        div {
+            width: 90%;
+            margin: 0 auto;
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    
+}

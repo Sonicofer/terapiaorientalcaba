@@ -1,0 +1,129 @@
+/*Main*/
+.main{
+    grid-area: main;
+    background-image: url(../img/img2mainbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .mainRedes{
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 576px) {
+    .main{
+        .mainFrase{
+            margin-top: 8rem;
+            margin-bottom: 8rem;
+            h2{
+                font-size: 4rem;
+            }
+            
+        }
+
+        .mainTerapias{
+            div{
+                max-width: 9rem;
+                img{
+                    width: 9rem;
+                    height: 9rem;
+                }
+            }
+        }
+
+        .tratamientos{
+            div{
+                img{
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+        }
+
+        .turnos{
+            div{
+                img{
+                    max-width: 25rem;
+                    .turnos2{
+                        p{
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+    .main{
+        width: 98%;
+        margin: 0 auto;
+        .mainFrase{
+            margin-top: 8rem;
+            margin-bottom: 8rem;
+            h2{
+                font-size: 4rem;
+            }
+            
+        }
+
+        .mainTerapias{
+        height: 20rem;
+            div{
+            max-width: 9rem;
+                img{
+                    width: 9rem;
+                    height: 9rem;
+                }
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .nosotros{
+            flex-direction: row;
+            justify-content: space-evenly;
+            div{
+                img{
+                    width: 15rem;
+                    height: 25rem;
+                }
+            }
+            .nosotros2{
+                width: 40%;
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .turnos{
+            div{
+                display: flex;
+                div{
+                    width: 80%;
+                    p{
+                        font-size: 2rem;
+                        span{
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

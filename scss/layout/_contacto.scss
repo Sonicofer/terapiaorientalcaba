@@ -1,0 +1,116 @@
+/*Contacto*/
+.contacto{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    h2{
+        width: 100%;
+        background-color: $color4;
+        font-family: $fuente3;
+        color: white;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    form{
+       fieldset{
+            background-color: $color4;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: center;
+            gap: 1rem;
+            max-width: 20rem;
+            box-shadow: rgb(39, 39, 39) 0px 10px 100px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                label{
+                    background-color: $color1;
+                    color: white;
+                }
+                select{
+                    text-align: center;
+                    option {
+                        background-color: white;
+                    }
+                    
+                }
+            }
+            .boton{
+                input{
+                    border: none;
+                    background-color: $color3;
+                    color: white;
+                    font-size: 1.2rem;
+                }
+                
+            }
+        }
+    }
+}
+
+/*Media queries*/
+/*Tablet*/
+@media screen and (min-width: 576px) {
+    .contacto{
+        form{
+            fieldset{
+                display: grid;
+                grid-template-areas:
+                "consulta tratamiento"
+                "nombre apellido" 
+                "email telefono" 
+                "boton boton" ;
+                max-width: 40rem;
+                margin: 0 auto;
+            .contactoMotivo{
+                    grid-area: consulta;
+                }
+                .contactoTratamiento{
+                    grid-area: tratamiento;
+                }
+                .contactoNombre{
+                    grid-area: nombre;
+                }
+                .contactoApellido{
+                    grid-area: apellido;
+                }
+                .contactoEmail{
+                    grid-area: email;
+                }
+                .contactoTelefono{
+                    grid-area: telefono;
+                }
+                .boton{
+                    grid-area: boton;
+                }
+            }
+        }
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+    .contacto {
+        h2 {
+            font-size: 3rem;
+        }
+        form{
+            fieldset{
+                max-width: 40rem;
+                .boton {
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,341 +1,405 @@
-/* Body */
+/* Varibales*/
+/*Reset*/
 body {
-  /* Reset*/
   padding: 0;
   margin: 0 auto;
   min-height: 100vh;
-  box-sizing: border-box;
-  /* Contenedor */ }
-  body .contenedor {
-    display: grid;
-    grid-template: "header" 10% "nav" 10% "main" 70% "footer" 10%;
-    row-gap: 0.2rem;
-    min-height: 100vh; }
-    body .contenedor .header {
-      grid-area: header;
-      background: linear-gradient(90deg, #402515 0%, #c6a18c 100%);
-      display: flex;
-      justify-content: space-evenly;
-      padding-top: 1rem; }
-      body .contenedor .header .headerIzq {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 40%; }
-        body .contenedor .header .headerIzq h1 {
-          color: #C6A18C;
-          font-family: "bad script";
-          text-align: center;
+  box-sizing: border-box; }
+
+/*Contenedor*/
+.contenedor {
+  display: grid;
+  grid-template: "header" auto "nav" auto "main" 1fr "footer" auto;
+  row-gap: 0.2rem;
+  min-height: 100vh; }
+
+/*Header*/
+.header {
+  grid-area: header;
+  background: linear-gradient(90deg, #402515 0%, #c6a18c 100%);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem; }
+  .header .headerIzq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%; }
+    .header .headerIzq h1 {
+      color: #C6A18C;
+      font-family: "bad script";
+      text-align: center;
+      font-size: 2rem; }
+    .header .headerIzq p {
+      font-family: "roboto";
+      color: #C6A18C;
+      text-align: center; }
+  .header .headerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%; }
+    .header .headerImg img {
+      border: solid white 0.1px;
+      border-radius: 100%;
+      width: 100%;
+      max-width: 10rem; }
+  .header .headerDer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%; }
+    .header .headerDer p {
+      width: auto;
+      font-size: 1rem;
+      text-align: center; }
+
+/*Media queries*/
+/*Tablet*/
+@media screen and (min-width: 576px) {
+  .header .headerIzq h1 {
+    font-size: 2.5rem; }
+  .header .headerIzq p {
+    font-size: 1.5rem; }
+  .header .headerDer p {
+    font-size: 1.5rem; } }
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+  .header .headerIzq h1 {
+    font-size: 3rem; }
+  .header .headerIzq p {
+    font-size: 1.5rem; }
+  .header .headerDer p {
+    width: 100%;
+    font-size: 1.5rem; } }
+
+/*Nav*/
+.nav {
+  grid-area: nav;
+  background-color: #DA8465; }
+  .nav .navUl {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem; }
+
+/*Tablet*/
+@media screen and (min-width: 576px) {
+  .nav {
+    max-height: 4rem; }
+    .nav .navUl {
+      justify-content: space-evenly; } }
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+  .nav {
+    width: 98%;
+    margin: 0 auto; }
+    .nav .navUl li a:hover {
+      color: white; } }
+
+/*Main*/
+.main {
+  grid-area: main;
+  background-image: url(../img/img2mainbackground.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .main .mainRedes {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem; }
+    .main .mainRedes img {
+      width: 100%;
+      height: 100%; }
+
+/*Tablet*/
+@media screen and (min-width: 576px) {
+  .main .mainFrase {
+    margin-top: 8rem;
+    margin-bottom: 8rem; }
+    .main .mainFrase h2 {
+      font-size: 4rem; }
+  .main .mainTerapias div {
+    max-width: 9rem; }
+    .main .mainTerapias div img {
+      width: 9rem;
+      height: 9rem; }
+  .main .tratamientos div img {
+    width: 8rem;
+    height: 8rem; }
+  .main .turnos div img {
+    max-width: 25rem; }
+    .main .turnos div img .turnos2 p {
+      font-size: 1.8rem; } }
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+  .main {
+    width: 98%;
+    margin: 0 auto; }
+    .main .mainFrase {
+      margin-top: 8rem;
+      margin-bottom: 8rem; }
+      .main .mainFrase h2 {
+        font-size: 4rem; }
+    .main .mainTerapias {
+      height: 20rem; }
+      .main .mainTerapias div {
+        max-width: 9rem; }
+        .main .mainTerapias div img {
+          width: 9rem;
+          height: 9rem; }
+        .main .mainTerapias div p {
           font-size: 2rem; }
-        body .contenedor .header .headerIzq p {
-          font-family: "roboto";
-          color: #C6A18C;
-          text-align: center; }
-      body .contenedor .header .headerImg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20%; }
-        body .contenedor .header .headerImg img {
-          border: solid white 0.1px;
-          border-radius: 100%;
-          width: 100%;
-          max-width: 10rem; }
-      body .contenedor .header .headerDer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+    .main .nosotros {
+      flex-direction: row;
+      justify-content: space-evenly; }
+      .main .nosotros div img {
+        width: 15rem;
+        height: 25rem; }
+      .main .nosotros .nosotros2 {
         width: 40%; }
-        body .contenedor .header .headerDer p {
-          width: auto;
-          font-size: 1rem;
-          text-align: center; }
-    body .contenedor .nav {
-      grid-area: nav;
-      background-color: #DA8465;
-      max-height: fit-content; }
-      body .contenedor .nav .navUl {
-        width: 100%;
-        text-align: center;
-        font-size: 1.5rem; }
-    body .contenedor .main {
-      grid-area: main;
-      background-image: url(../img/img2mainbackground.png);
-      background-repeat: no-repeat;
-      background-size: cover; }
-      body .contenedor .main .mainRedes {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-        margin-top: 0.5rem;
-        margin-right: 0.5rem; }
-        body .contenedor .main .mainRedes img {
-          width: 100%;
-          height: 100%; }
-      body .contenedor .main .mainFrase {
-        background-color: rgba(173, 149, 141, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 2rem; }
-        body .contenedor .main .mainFrase h2 {
-          font-family: "amarante";
-          text-align: center;
-          font-size: 2.5rem; }
-          body .contenedor .main .mainFrase h2 span {
-            color: white; }
-      body .contenedor .main .mainTerapias {
-        background-color: rgba(173, 149, 141, 0.5);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem; }
-        body .contenedor .main .mainTerapias div {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          max-width: 8rem; }
-          body .contenedor .main .mainTerapias div img {
-            border: solid black 1px;
-            border-radius: 100%;
-            margin-top: 1rem;
-            width: 6rem;
-            height: 6rem; }
-          body .contenedor .main .mainTerapias div img:hover {
-            transform: scale(1.1);
-            border: solid white 0.1px;
-            border-radius: 100%;
-            box-shadow: 0px 0px 1rem black; }
-          body .contenedor .main .mainTerapias div p {
-            font-family: "roboto";
-            font-size: 1.4rem;
-            text-align: center; }
-    body .contenedor .footer {
-      grid-area: footer;
-      background: linear-gradient(90deg, #402515 0%, #c6a18c 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-height: auto; }
-      body .contenedor .footer .footerRedes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0.5rem;
-        gap: 1rem; }
-        body .contenedor .footer .footerRedes img {
-          width: 100%;
-          height: 100%; }
-      body .contenedor .footer h3 {
-        color: white;
-        text-align: center;
-        font-family: "roboto";
-        font-size: 1.2rem; }
-    body .contenedor .tratamientos {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 2rem; }
-      body .contenedor .tratamientos div {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(173, 149, 141, 0.5);
-        align-items: center;
-        padding: 1rem; }
-        body .contenedor .tratamientos div img {
-          width: 5rem;
-          height: 5rem;
-          border: solid black 0.1px;
-          border-radius: 100%; }
-        body .contenedor .tratamientos div h2 {
-          font-family: "amarante";
-          color: white;
-          text-align: center; }
-        body .contenedor .tratamientos div p {
-          font-family: "roboto";
-          text-align: center;
-          font-size: 1.5rem; }
-    body .contenedor .nosotros {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-      background-color: rgba(173, 149, 141, 0.5);
-      padding: 2rem 2rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem; }
-      body .contenedor .nosotros div img {
-        width: 10rem;
-        height: 16rem;
-        box-shadow: 2px 2px 2rem; }
-      body .contenedor .nosotros .nosotros2 {
-        background-color: rgba(198, 161, 140, 0.5); }
-        body .contenedor .nosotros .nosotros2 p {
-          text-align: center;
-          font-size: 1.3rem; }
-    body .contenedor .turnos {
-      display: flex;
-      margin-top: 3rem;
-      background-color: rgba(173, 149, 141, 0.5);
-      padding: 2rem 2rem; }
-      body .contenedor .turnos div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-        margin: 0 auto; }
-        body .contenedor .turnos div img {
-          width: 95%;
-          max-width: 16rem;
-          box-shadow: 2px 2px 2rem; }
-        body .contenedor .turnos div .turnos2 {
-          background-color: rgba(198, 161, 140, 0.5); }
-          body .contenedor .turnos div .turnos2 p {
-            text-align: center;
-            font-size: 1.3rem; }
-            body .contenedor .turnos div .turnos2 p span {
-              color: white;
-              font-family: "amarante"; }
-    body .contenedor .contacto {
-      display: flex;
-      flex-direction: column;
-      margin-top: 2rem;
-      margin-bottom: 2rem; }
-      body .contenedor .contacto h2 {
-        width: 100%;
-        background-color: rgba(173, 149, 141, 0.5);
-        font-family: "amarante";
-        color: white;
-        font-size: 1.8rem;
-        text-align: center; }
-      body .contenedor .contacto form fieldset {
-        background-color: rgba(173, 149, 141, 0.5);
-        margin: 0 auto;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: center;
-        gap: 1rem; }
-        body .contenedor .contacto form fieldset div {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          text-align: center; }
-          body .contenedor .contacto form fieldset div label {
-            background-color: #402515;
-            color: white; }
-          body .contenedor .contacto form fieldset div select {
-            text-align: center; }
-        body .contenedor .contacto form fieldset .boton input {
-          background-color: #DA8465;
-          color: white; }
-    @media screen and (min-width: 576px) {
-      body .contenedor {
-        grid-template: "header" auto "nav" 0.1fr "main" 4fr "footer" 0.1fr; }
-        body .contenedor .header {
-          max-height: 12rem;
-          padding-bottom: 0.5rem; }
-          body .contenedor .header .headerIzq h1 {
-            font-size: 3rem; }
-          body .contenedor .header .headerIzq p {
-            font-size: 1.5rem; }
-          body .contenedor .header .headerDer p {
-            font-size: 1.5rem; }
-        body .contenedor .navUl {
-          justify-content: space-evenly; }
-        body .contenedor .main .mainFrase {
-          margin-top: 8rem;
-          margin-bottom: 8rem; }
-          body .contenedor .main .mainFrase h2 {
-            font-size: 4rem; }
-        body .contenedor .main .mainTerapias div {
-          max-width: 9rem; }
-          body .contenedor .main .mainTerapias div img {
-            width: 9rem;
-            height: 9rem; }
-        body .contenedor .main .tratamientos div img {
-          width: 8rem;
-          height: 8rem; }
-        body .contenedor .main .turnos div img {
-          max-width: 25rem; }
-          body .contenedor .main .turnos div img .turnos2 p {
-            font-size: 1.8rem; }
-        body .contenedor .contacto form fieldset {
-          width: 80%;
-          margin: 0 auto;
-          display: grid;
-          grid-template-areas: "consulta tratamiento" "nombre apellido"  "email telefono"  "boton boton"; }
-          body .contenedor .contacto form fieldset .contactoMotivo {
-            grid-area: consulta; }
-          body .contenedor .contacto form fieldset .contactoTratamiento {
-            grid-area: tratamiento; }
-          body .contenedor .contacto form fieldset .contactoNombre {
-            grid-area: nombre; }
-          body .contenedor .contacto form fieldset .contactoApellido {
-            grid-area: apellido; }
-          body .contenedor .contacto form fieldset .contactoEmail {
-            grid-area: email; }
-          body .contenedor .contacto form fieldset .contactoTelefono {
-            grid-area: telefono; }
-          body .contenedor .contacto form fieldset .boton {
-            grid-area: boton; } }
-    @media screen and (min-width: 900px) {
-      body .contenedor .header {
-        max-height: 12rem; }
-        body .contenedor .header .headerIzq h1 {
-          font-size: 3.8rem; }
-        body .contenedor .header .headerIzq p {
-          font-size: 2rem; }
-        body .contenedor .header .headerDer p {
-          width: 100%;
+        .main .nosotros .nosotros2 p {
           font-size: 1.8rem; }
-      body .contenedor .nav {
-        width: 98%;
-        margin: 0 auto; }
-        body .contenedor .nav .navUl li a:hover {
-          color: white; }
-      body .contenedor .main {
-        width: 98%;
-        margin: 0 auto; }
-        body .contenedor .main .mainFrase {
-          margin-top: 8rem;
-          margin-bottom: 8rem; }
-          body .contenedor .main .mainFrase h2 {
-            font-size: 4rem; }
-        body .contenedor .main .mainTerapias {
-          height: 20rem; }
-          body .contenedor .main .mainTerapias div {
-            max-width: 9rem; }
-            body .contenedor .main .mainTerapias div img {
-              width: 9rem;
-              height: 9rem; }
-            body .contenedor .main .mainTerapias div p {
-              font-size: 2rem; }
-        body .contenedor .main .nosotros {
-          flex-direction: row;
-          justify-content: space-evenly; }
-          body .contenedor .main .nosotros div img {
-            width: 15rem;
-            height: 25rem; }
-          body .contenedor .main .nosotros .nosotros2 {
-            width: 40%; }
-            body .contenedor .main .nosotros .nosotros2 p {
-              font-size: 1.8rem; }
-        body .contenedor .main .turnos div {
-          display: flex; }
-          body .contenedor .main .turnos div div {
-            width: 80%; }
-            body .contenedor .main .turnos div div p {
-              font-size: 2rem; }
-              body .contenedor .main .turnos div div p span {
-                font-size: 2.2rem; } }
+    .main .turnos div {
+      display: flex; }
+      .main .turnos div div {
+        width: 80%; }
+        .main .turnos div div p {
+          font-size: 2rem; }
+          .main .turnos div div p span {
+            font-size: 2.2rem; } }
+
+/*Index*/
+.mainFrase {
+  background-color: rgba(173, 149, 141, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: #272727 0px 10px 100px;
+  margin: 2rem auto; }
+  .mainFrase h2 {
+    font-family: "amarante";
+    text-align: center;
+    font-size: 2.5rem; }
+    .mainFrase h2 span {
+      color: white; }
+
+.mainTerapias {
+  background-color: rgba(173, 149, 141, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  .mainTerapias div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 8rem; }
+    .mainTerapias div img {
+      border: solid black 1px;
+      border-radius: 100%;
+      margin-top: 1rem;
+      width: 6rem;
+      height: 6rem; }
+      .mainTerapias div img:hover {
+        transform: scale(1.1);
+        border: solid white 0.1px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 1rem black; }
+    .mainTerapias div p {
+      font-family: "roboto";
+      font-size: 1.4rem;
+      text-align: center; }
+
+@media screen and (min-width: 900px) {
+  .mainFrase {
+    width: 98%; } }
+
+/*Tratamientos*/
+.tratamientos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem; }
+  .tratamientos div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(173, 149, 141, 0.5);
+    align-items: center;
+    padding: 1rem; }
+    .tratamientos div img {
+      width: 5rem;
+      height: 5rem;
+      border: solid black 0.1px;
+      border-radius: 100%; }
+    .tratamientos div h2 {
+      font-family: "amarante";
+      color: white;
+      text-align: center; }
+    .tratamientos div p {
+      font-family: "roboto";
+      text-align: center;
+      font-size: 1.5rem; }
+
+@media screen and (min-width: 900px) {
+  .tratamientos div {
+    width: 90%;
+    margin: 0 auto; }
+    .tratamientos div p {
+      font-size: 1.8rem; } }
+
+/*Nosotros*/
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: rgba(173, 149, 141, 0.5);
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  .nosotros div img {
+    width: 10rem;
+    height: 16rem;
+    box-shadow: 2px 2px 2rem; }
+  .nosotros .nosotros2 {
+    background-color: rgba(198, 161, 140, 0.5);
+    box-shadow: black 0rem 1rem 100px; }
+    .nosotros .nosotros2 p {
+      text-align: center;
+      font-size: 1.3rem; }
+
+/*Turnos*/
+.turnos {
+  display: flex;
+  margin-top: 3rem;
+  background-color: rgba(173, 149, 141, 0.5);
+  padding: 2rem 2rem; }
+  .turnos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto; }
+    .turnos div img {
+      grid-area: img;
+      width: 95%;
+      max-width: 16rem;
+      box-shadow: 2px 2px 2rem; }
+    .turnos div .turnos2 {
+      background-color: rgba(198, 161, 140, 0.5); }
+      .turnos div .turnos2 p {
+        grid-area: parrafo;
+        text-align: center;
+        font-size: 1.3rem; }
+        .turnos div .turnos2 p span {
+          color: white;
+          font-family: "amarante"; }
+
+/*Contacto*/
+.contacto {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+  .contacto h2 {
+    width: 100%;
+    background-color: rgba(173, 149, 141, 0.5);
+    font-family: "amarante";
+    color: white;
+    font-size: 1.8rem;
+    text-align: center; }
+  .contacto form fieldset {
+    background-color: rgba(173, 149, 141, 0.5);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    gap: 1rem;
+    max-width: 20rem;
+    box-shadow: #272727 0px 10px 100px; }
+    .contacto form fieldset div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center; }
+      .contacto form fieldset div label {
+        background-color: #402515;
+        color: white; }
+      .contacto form fieldset div select {
+        text-align: center; }
+        .contacto form fieldset div select option {
+          background-color: white; }
+    .contacto form fieldset .boton input {
+      border: none;
+      background-color: #DA8465;
+      color: white;
+      font-size: 1.2rem; }
+
+/*Media queries*/
+/*Tablet*/
+@media screen and (min-width: 576px) {
+  .contacto form fieldset {
+    display: grid;
+    grid-template-areas: "consulta tratamiento" "nombre apellido"  "email telefono"  "boton boton";
+    max-width: 40rem;
+    margin: 0 auto; }
+    .contacto form fieldset .contactoMotivo {
+      grid-area: consulta; }
+    .contacto form fieldset .contactoTratamiento {
+      grid-area: tratamiento; }
+    .contacto form fieldset .contactoNombre {
+      grid-area: nombre; }
+    .contacto form fieldset .contactoApellido {
+      grid-area: apellido; }
+    .contacto form fieldset .contactoEmail {
+      grid-area: email; }
+    .contacto form fieldset .contactoTelefono {
+      grid-area: telefono; }
+    .contacto form fieldset .boton {
+      grid-area: boton; } }
+
+/*Desktop*/
+@media screen and (min-width: 900px) {
+  .contacto h2 {
+    font-size: 3rem; }
+  .contacto form fieldset {
+    max-width: 40rem; }
+    .contacto form fieldset .boton:hover {
+      transform: scale(1.02); } }
+
+/*Footer*/
+.footer {
+  grid-area: footer;
+  background: linear-gradient(90deg, #402515 0%, #c6a18c 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: auto; }
+  .footer .footerRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    gap: 1rem; }
+    .footer .footerRedes img {
+      width: 100%;
+      height: 100%; }
+  .footer h3 {
+    color: white;
+    text-align: center;
+    font-family: "roboto";
+    font-size: 1.2rem; }

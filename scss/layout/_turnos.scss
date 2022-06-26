@@ -1,0 +1,37 @@
+/*Turnos*/
+
+.turnos{
+    display: flex;
+    margin-top: 3rem;
+    background-color: $color4;
+    padding: 2rem 2rem;
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin: 0 auto;
+
+        img{
+            grid-area: img;
+            width: 95%;
+            max-width: 16rem;
+            box-shadow: 2px 2px 2rem;
+        }
+        
+        .turnos2{
+            background-color: rgba(198, 161, 140, 0.5);
+            p{
+                grid-area: parrafo;
+                text-align: center;
+                font-size: 1.3rem;
+                span{
+                    color: white;
+                    font-family: $fuente3;
+                }
+            }
+        }
+    }
+    
+}
