@@ -1,9 +1,7 @@
 /*Index*/
 .mainFrase {
     background-color: $color4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexr;
     flex-wrap: wrap;
     box-shadow: rgb(39, 39, 39) 0px 10px 100px;
     margin: 2rem auto;
@@ -21,33 +19,34 @@
 
 .mainTerapias{
     background-color: $color4;
-    display: flex;
-    flex-wrap: wrap;
+    @include flexr;
     justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 
     div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexc
         width: 100%;
         max-width: 8rem;
-        img{
-            border: solid black 1px;
-            border-radius: 100%;
-            margin-top: 1rem;
-            width: 6rem;
-            height: 6rem;
-            &:hover{
-                transform: scale(1.1);
-                border: solid white 0.1px;
-                border-radius: 100%;
-                box-shadow: 0px 0px 1rem black;
-            }
+
+        .mainTerapiasUno {
+            @extend %terapias;
         }
+        .mainTerapiasDos {
+            @extend %terapias;
+        }
+        .mainTerapiasTres {
+            @extend %terapias;
+        }
+        .mainTerapiasCuatro {
+            @extend %terapias;
+        }
+        .mainTerapiasCinco {
+            @extend %terapias;
+        }
+        
         p{
             font-family: $fuente2;
             font-size: 1.4rem;

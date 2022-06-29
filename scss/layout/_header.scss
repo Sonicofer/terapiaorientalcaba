@@ -4,13 +4,10 @@
     background: $gradiente;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 
     .headerIzq{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexc;
         width: 40%;
 
         h1{
@@ -29,10 +26,9 @@
     }
 
     .headerImg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexr;
         width: 20%;
+        margin: 1rem 0;
 
         img{
             border: solid white 0.1px;
@@ -43,9 +39,7 @@
     }
 
     .headerDer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexr;
         flex-wrap: wrap;
         width: 40%;
 
@@ -62,6 +56,7 @@
 /*Tablet*/
 @media screen and (min-width: 576px) {
     .header{
+        padding-top: 0;
         .headerIzq{
             h1{
                 font-size: 2.5rem;

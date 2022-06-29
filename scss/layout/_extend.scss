@@ -1,0 +1,12 @@
+%terapias {
+    border: solid black 1px;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem ;
+    &:hover {
+        transform: scale(1.1);
+        border: solid white 1px;
+    }
+}

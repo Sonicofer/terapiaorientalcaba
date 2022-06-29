@@ -3,15 +3,11 @@
 .footer{
     grid-area: footer;
     background: $gradiente;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexc;
     max-height: auto;
 
     .footerRedes{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexr;
         margin-top: 0.5rem;
         gap: 1rem;
 
